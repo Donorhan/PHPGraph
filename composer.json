@@ -1,5 +1,5 @@
 {
-  "name": "dono-sybrix/php-graph",
+  "name": "dono-sybrix/php-graph-builder",
   "description": "Create graphs",
   "license": "MIT",
   "keywords": ["graph", "node", "condition", "consequence"],
