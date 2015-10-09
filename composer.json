@@ -1,0 +1,26 @@
+{
+  "name": "DonoSybrix/PHPGraph",
+  "description": "Create graphs",
+  "license": "MIT",
+  "keywords": ["graph", "node", "condition", "consequence"],
+  "authors": [
+    {
+      "name": "DonoSybrix",
+      "email": "dono.orhan@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require-dev": {
+    "phpunit/phpunit": "~4.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "PHPGraph\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "PHPGraph\\Test\\": "test"
+    }
+  }
+}
