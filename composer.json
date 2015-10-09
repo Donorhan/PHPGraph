@@ -1,5 +1,5 @@
 {
-  "name": "DonoSybrix/PHPGraph",
+  "name": "dono-sybrix/PHPGraph",
   "description": "Create graphs",
   "license": "MIT",
   "keywords": ["graph", "node", "condition", "consequence"],
