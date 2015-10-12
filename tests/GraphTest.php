@@ -47,4 +47,18 @@ class GraphTest extends \PHPUnit_Framework_TestCase
 
         $this->assertEquals($graph->hasGonethrough('Hall B'), true);
     }
+
+    public function testSearching()
+    {
+        $user = new \stdClass();
+        $user->size = 1.70;
+
+        $graph = $this->buildGraph($user);
+
+        $node = $graph->searchNode('Hall C');
+        $this->assertNotNull($node);
+
+        $node2 = $graph->searchNode('Hall F');
+        $this->assertNull($node2);
+    }
 }
