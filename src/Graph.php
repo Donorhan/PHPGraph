@@ -125,7 +125,7 @@ class Graph
         }
 
         if ($strict && !$result) {
-            throw new \Exception('Unable to found : '.$search);
+            throw new \Exception('Unable to found : ' . $search);
         }
 
         return $result;
@@ -149,6 +149,9 @@ class Graph
         // Init path
         $this->path = [];
         $this->path[] = $activeNode;
+
+        // Ensure every consequences keys exists in the result array
+        $this->initConsequencesKeys($results['data']);
 
         while ($activeNode) {
 
@@ -180,5 +183,22 @@ class Graph
 
         $results['path'] = $this->path;
         return $results;
+    }
+
+    /**
+     * Get all consequences keys from the graph and set them to null
+     * Ensure that keys exists to avoid errors
+     *
+     * @param array $data Array to fill
+     */
+    private function initConsequencesKeys(&$data)
+    {
+        foreach ($this->links as $link) {
+            $link->applyConsequences($data);
+        }
+
+        foreach ($data as $key => $value) {
+            $data[$key] = null;
+        }
     }
 }
